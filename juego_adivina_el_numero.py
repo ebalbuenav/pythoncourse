@@ -18,22 +18,22 @@ while numeroGanador != numeroIngresado: #Si el numero ingresado es diferente al 
     if numeroDeVeces <3:    # Si el numero de intentos < 3, sigue estas secuencia.
         numeroDeVeces += 1  # Incrementa en 1 el numero de intentos por cada ciclo while.
         if numeroGanador > numeroIngresado: #Si el num ganador > al ingresado, solicita un nuevo ingreso y vuelve al while.
-            numeroIngresado = int(input(f'El numero ganador {numeroGanador} esta mas arriba. Ingresa tu numero de la suerte: '))
+            numeroIngresado = int(input(f'El numero ganador esta mas arriba. Ingresa otro numero de la suerte: '))
         elif numeroGanador < numeroIngresado: #Si el num ganador < al ingresado, solicita un nuevo ingreso y vuelve al while
-            numeroIngresado = int(input(f'El numero ganador {numeroGanador} esta mas abajo. Ingresa tu numero de la suerte: '))
+            numeroIngresado = int(input(f'El numero ganador esta mas abajo. Ingresa otro numero de la suerte: '))
     else: # Si num intentos = 3, print esto, reinicia el num de intentos, genera un nuevo num ganador y vuelve al while.
-        print(f'Rayos manit@, te chanceamos {numeroDeVeces} veces y ni asi. La acabas de macar. Pa\' la proxima sera!')
-        numeroIngresado = int(input('Intentalo de nuevo, Ingresa tu numero de la suerte entre 1 y 10: '))
+        print(f'Rayos! lo intentaste {numeroDeVeces} veces y no lo lograste. Para la proxima sera!')
+        numeroIngresado = int(input('Intentalo de nuevo, Ingresa tu numero de la suerte'))
         numeroGanador = random.randint(1,10) #genera el nuevo num ganador.
         numeroDeVeces = 1    #reinicia el numero de intentos.
 #Si el numero ingresado es igual al ganador entonces..
 
 if numeroDeVeces == 1:
-    print(f'Pinche madre! {numeroGanador} es el numero correcto. Te acabas de ganar un Wisky 18 anios. A La vergaaa! Ganaste al primer intento, que muvi!')            
+    print(f'Felicidades! {numeroGanador} es el numero correcto. Te acabas de ganar un Wisky 18 anios. Ganaste al primer intento, que muvi!')            
 elif numeroDeVeces == 3:
-    print(f'Pinche madre! {numeroGanador} es el numero correcto. Te acabas de ganar un Triculi. A La vergaaa! Ganaste de chepa en el ultimo intento!')
+    print(f'Felicidades! {numeroGanador} es el numero correcto. Te acabas de ganar un Helado. Ganaste en el ultimo intento!')
 else:
-    print(f'Pinche madre! {numeroGanador} es el numero correcto. Te acabas de ganar un romo. A La vergaaa! Ganaste en {numeroDeVeces} intentos, que muvi!')        
+    print(f'Felicidades! {numeroGanador} es el numero correcto. Te acabas de ganar un like en tus redes. Ganaste en {numeroDeVeces} intentos, que muvi!')        
             
 
     
